@@ -3,6 +3,16 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
+  class Position extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
+    }
+  };
   Position.init({
     position_id: {
       type: DataTypes.INTEGER,
@@ -12,10 +22,6 @@ module.exports = (sequelize, DataTypes) => {
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false
-    },
-    is_active: {
-      type: DataTypes.BOOLEAN,
       allowNull: false
     },
     create_date: {
@@ -29,6 +35,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Position',
+    timestamps: false
   });
   return Position;
 };
