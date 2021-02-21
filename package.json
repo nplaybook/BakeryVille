@@ -4,7 +4,8 @@
   "description": "I create this mini project to impleent what I've learnt about express and ORM.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -17,10 +18,13 @@
   },
   "homepage": "https://github.com/nplaybook/BakeryVille#readme",
   "dependencies": {
-    "express": "^4.17.1",
     "fs": "0.0.1-security",
     "path": "^0.12.7",
-    "sequelize": "^6.5.0",
-    "sequelize-cli": "^6.2.0"
+    "pg": "^8.5.1",
+    "sequelize": "^6.5.0"
+  },
+  "devDependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
   }
 }
